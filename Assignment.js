@@ -1,65 +1,77 @@
-//kilometerToMeter Code
+// https://github.com/MohtasimShariar/Assignment-Javascript
+
+
+//kilometerToMeter Code: A javascript code to Convert kilometer to meter
 function kilometerToMeter(kilometer){
-    var Meter =kilometer*100;
+    var Meter = kilometer*1000;    //1000 meter = 1 kilometer
     if(kilometer<=-1){
-       return "Error! Please inter valid number"
+       return "Error! Please enter a valid number"
     }
     return Meter;
 }
-var meter = kilometerToMeter(100);
-console.log(meter);
+//If you want to see the output:
+//var meter = kilometerToMeter(100);
+//console.log(meter);
 
 
-//budgetCalculator
+//budgetCalculator: 
 function budgetCalculator(watch,phone,laptop){
-    var Unit_watch=50;
-    var watchTotal=Unit_watch*watch;
-     var Unit_phone=100;
-     var phoneTotal=Unit_phone*phone;
-     var Unit_laptop=500;
-     var laptopTotal=Unit_laptop*laptop;
+    var unit_watch_price=50;
+    var watchTotal=unit_watch_price*watch;
+
+     var unit_phone_price=100;
+     var phoneTotal=unit_phone_price*phone;
+
+     var unit_laptop_price=500;
+     var laptopTotal=unit_laptop_price*laptop;
+     
+    //Calculating total price
      var total=watchTotal+phoneTotal+laptopTotal;
+
      return total;
  
  }
- var totalPrice=budgetCalculator(3,2,2);
- console.log(totalPrice);
+ //If you want to see the output:
+ //var totalPrice=budgetCalculator(3,2,2);
+ //console.log(totalPrice);
  
 
-// hotelCost
+// hotelCost: Hotel cost calculation javascript code
  function hotelCost(stayDay) {
-    var Allday =0;
+    var TotalDayCost =0;             //for 1 to 10 days
     if (stayDay <= 10) {
-        Allday = stayDay * 100;
+        TotalDayCost = stayDay * 100;
     
     } else if (stayDay <= 20) {
         var First10day = 10 * 100;
-        var Now = stayDay - 10;
+        var Now = stayDay - 10;      //for 11 to 20 days
         var Secend10day = Now * 80;
-        Allday = First10day + Secend10day;
+        TotalDayCost = First10day + Secend10day;
     } else {
         var First10day = 10 * 100;
-        var Secend10day = 10 * 80;
+        var Secend10day = 10 * 80;    //for 21 to above days
         var Now = stayDay - 20;
-        var ThardDay = Now * 50;
-        Allday = First10day + Secend10day + ThardDay;
+        var ThirdDay = Now * 50;
+        TotalDayCost = First10day + Secend10day + ThirdDay;
     }
-    return Allday;
+    return TotalDayCost;
     }
-    var result = hotelCost(22);
-    console.log(result);
+    //If you want to see the output:
+    //var result = hotelCost(22);
+    //console.log(result);
 
 
-    //megaFriend
+    //megaFriend code 
 
-    function megaFriend(array) {
-        var longestWord = "";
-        array.forEach(function (word) {
-            if (word.length > longestWord.length) {
-                longestWord = word;
+    function megaFriend(AllFriend) {
+        var largestName = "";
+        AllFriend.forEach(function (NameWord) {
+            if (NameWord.length > largestName.length) {
+                largestName = NameWord;
             }
         });
-        return longestWord;
+        return largestName;
     }
-    var bigfnd = megaFriend(['onik','sujon','onim','azazali']);
-    console.log(bigfnd);
+    //If you want to see the output:
+   // var largestFriend = megaFriend(['onik','sujon','onim','azazali']);
+    //console.log(largestFriend);
